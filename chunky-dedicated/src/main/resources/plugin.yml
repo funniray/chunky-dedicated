@@ -1,0 +1,8 @@
+name: ChunkyDedicated
+version: '${project.version}'
+main: com.funniray.chunkydedicated.ChunkyDedicated
+api-version: 1.20
+authors: [ Funniray ]
+description: Chunky extension that stops the server after chunky finished
+depend:
+  - Chunky
