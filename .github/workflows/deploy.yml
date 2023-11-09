@@ -18,7 +18,7 @@ jobs:
 
       - uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
 
@@ -30,7 +30,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Packages
-        run: mvn --update-snapshots --batch-mode package
+        run: mvn -f chunky-dedicated/ --update-snapshots --batch-mode package
 
       - name: Build Docker image
         uses: docker/build-push-action@v5

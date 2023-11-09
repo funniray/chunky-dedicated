@@ -10,4 +10,5 @@ ENV SEED=""
 WORKDIR /srv/
 COPY ./docker-data .
 COPY ./chunky-dedicated/target/chunky-dedicated-*.jar ./plugins
+RUN chmod 777 -R .
 ENTRYPOINT ./entrypoint.sh
